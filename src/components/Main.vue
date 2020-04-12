@@ -4,28 +4,16 @@
     <SearchBar />
     <b-container>
       <b-row>
-        <b-col lg="2" md="12">
+        <b-col lg="2">
           <BrandMenu />
         </b-col>
-        <b-col lg="8" md="12">
-          <div class="banner">
-            <h4>CÁC SẢN PHẨM CHUYÊN DỤNG CHO SALON</h4>
-            <ProductGroup title="THUỐC UỐN" />
-            <ProductGroup title="THUỐC DUỖI" />
-            <ProductGroup title="THUỐC NHUỘM" />
-            <ProductGroup title="DẦU HẤP, DẦU XẢ" />
-            <ProductGroup title="DẦU GỘI" />
-            <ProductGroup title="PHỤC HỒI" />
-            <ProductGroup title="TINH DẦU" />
-            <ProductGroup title="GÔM SÁP" />
-            <ProductGroup title="HỖ TRỢ HÓA CHẤT" />
-            <ProductGroup title="CÁC SẢN PHẨM KHÁC" />
-          </div>
+        <b-col lg="8">
+          <router-view />
         </b-col>
-        <b-col lg="2" md="12">
-          <ProductGroupRight title="CÁC SẢN PHẨM MỚI" />
+        <b-col lg="2">
+          <!-- <ProductGroupRight title="CÁC SẢN PHẨM MỚI" />
           <ProductGroupRight title="CÁC SẢN PHẨM HOT" />
-          <ProductGroupRight title="CÁC SẢN PHẨM BÁN CHẠY" />
+          <ProductGroupRight title="CÁC SẢN PHẨM BÁN CHẠY" /> -->
         </b-col>
       </b-row>
     </b-container>
@@ -38,8 +26,8 @@ import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
 import SearchBar from "../components/SearchBar.vue";
 import BrandMenu from "../components/BrandMenu.vue";
-import ProductGroup from "../components/ProductGroup.vue";
-import ProductGroupRight from "../components/ProductGroupRight.vue";
+// import ProductGroup from "../components/ProductGroup.vue";
+// import ProductGroupRight from "../components/ProductGroupRight.vue";
 
 export default {
   name: "App",
@@ -48,13 +36,13 @@ export default {
     SearchBar,
     BrandMenu,
     Footer,
-    ProductGroup,
-    ProductGroupRight
+    // ProductGroup,
+    // ProductGroupRight
   }
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -62,5 +50,15 @@ export default {
   text-align: center;
   color: #2c3e50;
   overflow: hidden;
+}
+
+.trangchu {
+  text-align: left;
+  line-height: 2.5em;
+
+  h4 {
+    text-decoration: underline;
+  }
+
 }
 </style>

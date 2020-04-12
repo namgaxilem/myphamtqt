@@ -1,21 +1,23 @@
 <template>
-  <footer>
+  <footer class="mt-5">
     <b-container>
       <b-row>
         <b-col lg="4" md="12">
-          <img src="@/assets/images/logo-brand.png" />
-          <p>Chất lượng làm nên giá trị, giá trị làm nên thương hiệu, thương hiêu làm nên uy tín, uy tín làm nên niềm tin.</p>
-          <p>Tận tình chu đáo phục vụ</p>
-          <p>Lấy sự hài long của khách hang đặt lên hang đầu</p>
+          <h4>Chính sách</h4>
+          <ul>
+            <li>Chất lượng làm nên giá trị, giá trị làm nên thương hiệu, thương hiêu làm nên uy tín, uy tín làm nên niềm tin.</li>
+            <li>Tận tình chu đáo phục vụ</li>
+            <li>Lấy sự hài long của khách hang đặt lên hang đầu</li>
+          </ul>
         </b-col>
         <b-col lg="4" md="12">
           <h4>Liên hệ</h4>
           <ul>
             <li>
-              <span class="text-bold">Địa chỉ:</span> 113 An Phú Đông phường 12 quận 12
+              <span class="text-bold">Địa chỉ:</span> 331 Vườn Lài, phường An Phú Đông, quận 12, Thành phố Hồ Chí Minh
             </li>
             <li>
-              <span class="text-bold">Số điện thoại:</span> 0123456789
+              <span class="text-bold">Số điện thoại / Zalo:</span> 0332 76 8494
             </li>
             <li>
               <span class="text-bold">Email:</span> namgaxilem@gmail.com
@@ -24,7 +26,7 @@
         </b-col>
         <b-col lg="4" md="12">
           <h4>Chính sách</h4>
-          <ul>
+          <ul class="text-center">
             <li>Chính sách Bảo hành</li>
             <li>Chính sách sử dụng</li>
             <li>Chính sách bảo mật</li>
@@ -47,11 +49,10 @@ footer {
   background-color: #f8f8f8;
   text-align: left;
   padding: 1em;
+}
 
-  img {
-    width: 100%;
-    max-width: 100px;
-  }
+h4 {
+  text-align: center;
 }
 
 ul {
@@ -68,5 +69,12 @@ ul {
 
 .text-bold {
   font-weight: bold;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 </style>
