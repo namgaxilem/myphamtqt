@@ -14,20 +14,20 @@
       <ul class="brand-menu" :class="{'open': isOpenMenu}">
         <li @click="$router.push({ name: 'homepage' })">Trang chủ</li>
         <li>Sản phẩm</li>
-        <li @click="$router.push({ name: 'brand' })">Thương hiệu
+        <li><span @click="$router.push({ name: 'brand' })">Thương hiệu</span>
           <ul class="brand-menu-sub">
-            <li>KAMI</li>
-            <li>AROMI</li>
-            <li>AMULET</li>
-            <li>LUSY</li>
-            <li>KERATIN</li>
-            <li>NANO</li>
-            <li>COMPLEX</li>
-            <li>CHIKO</li>
-            <li>LUSSTALY</li>
-            <li>LANBA</li>
-            <li>WOLAPE</li>
-            <li>KARVANNALL</li>
+            <li @click="$router.push({ name: 'brand', params: { id: 'kami' } })">KAMI</li>
+            <li @click="$router.push({ name: 'brand', params: { id: 'aromi' } })">AROMI</li>
+            <li @click="$router.push({ name: 'brand', params: { id: 'amulet' } })">AMULET</li>
+            <li @click="$router.push({ name: 'brand', params: { id: 'lusy' } })">LUSY</li>
+            <li @click="$router.push({ name: 'brand', params: { id: 'keratine' } })">KERATIN</li>
+            <li @click="$router.push({ name: 'brand', params: { id: 'nano' } })">NANO</li>
+            <li @click="$router.push({ name: 'brand', params: { id: 'complex' } })">COMPLEX</li>
+            <li @click="$router.push({ name: 'brand', params: { id: 'chiko' } })">CHIKO</li>
+            <li @click="$router.push({ name: 'brand', params: { id: 'lusstaly' } })">LUSSTALY</li>
+            <li @click="$router.push({ name: 'brand', params: { id: 'lanba' } })">LANBA</li>
+            <li @click="$router.push({ name: 'brand', params: { id: 'wolape' } })">WOLAPE</li>
+            <li @click="$router.push({ name: 'brand', params: { id: 'karvannal' } })">KARVANNALL</li>
           </ul>
         </li>
         <li>Sản phẩm chuyên dùng cho Salon</li>
@@ -53,6 +53,10 @@ export default {
   methods: {
     openBrandMenu() {
       this.isOpenMenu = !this.isOpenMenu;
+    },
+    cc() {
+      console.log('cc');
+      this.$router.push({ name: 'brand', params: { id: 'aromi' } })
     }
   }
 };
@@ -66,7 +70,7 @@ export default {
 
 .brand-menu-bar {
   display: none;
-  background: green;
+  background: #28a745;
 
   .brand-menu-bar-container {
     display: flex;
@@ -91,7 +95,7 @@ export default {
     position: relative;
 
     &:hover {
-      background: green;
+      background: #28a745;
       color: #fff;
       cursor: pointer;
 

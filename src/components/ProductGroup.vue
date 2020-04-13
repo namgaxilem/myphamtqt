@@ -1,67 +1,55 @@
 <template>
-  <div>
-    <h5 class="text-left text-bold">{{title}}</h5>
-    <carousel
-     :perPage="4"
-     :autoplay="true"
-     :autoplayHoverPause="true"
-     :autoplayTimeout="2000"
-     :loop="true"
-    >
-      <slide>
-        <div>
-          <img src="@/assets/images/thuoc-nhuom-toc-han-quoc.png" />
-          <h6>Thuốc nhuộm tóc Hàn Quốc</h6>
-          <p>200.000</p>
-        </div>
-      </slide>
-      <slide>
-        <div>
-          <img src="@/assets/images/thuoc-nhuom-toc-han-quoc.png" />
-          <h6>Thuốc nhuộm tóc Hàn Quốc</h6>
-          <p>200.000</p>
-        </div>
-      </slide>
-      <slide>
-        <div>
-          <img src="@/assets/images/thuoc-nhuom-toc-han-quoc.png" />
-          <h6>Thuốc nhuộm tóc Hàn Quốc</h6>
-          <p>200.000</p>
-        </div>
-      </slide>
-      <slide>
-        <div>
-          <img src="@/assets/images/thuoc-nhuom-toc-han-quoc.png" />
-          <h6>Thuốc nhuộm tóc Hàn Quốc</h6>
-          <p>200.000</p>
-        </div>
-      </slide>
-      <slide>
-        <div>
-          <img src="@/assets/images/thuoc-nhuom-toc-han-quoc.png" />
-          <h6>Thuốc nhuộm tóc Hàn Quốc</h6>
-          <p>200.000</p>
-        </div>
-      </slide>
-    </carousel>
+  <div class="product-group">
+    <div v-for="(product, key) in products" :key="key" class="product-container">
+      <img src="@/assets/images/thuoc-nhuom-toc-han-quoc.png" class="product-img" alt="Card image" />
+      <div class="card-body">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text">{{product.price}}</p>
+        <a href="#" class="btn btn-success">Mua ngay</a>
+      </div>
+      <!-- <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div> -->
+    </div>
   </div>
 </template>
 
 <script>
-import { Carousel, Slide } from "vue-carousel";
-
 export default {
   name: "ProductGroup",
-  props: ["title", "products"],
-  components: {
-    Carousel,
-    Slide
-  }
+  props: ["products"],
+  components: {},
+  data() {
+    return {};
+  },
+  computed: {},
+  methods: {}
 };
 </script>
 
-<style scoped lang="scss">
-h5 {
-  font-weight: bold;
+<style lang="scss" scoped>
+.product-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-container {
+  color: black;
+  margin: 1em;
+  width: 185px;
+}
+
+.product-img {
+
+}
+
+@media screen and (max-width: 991px) {
+  .product-group {
+    flex-direction: column;
+  }
+
+  .product-container {
+    width: auto;
+  }
 }
 </style>

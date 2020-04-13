@@ -7,14 +7,14 @@
         <b-col lg="2">
           <BrandMenu />
         </b-col>
-        <b-col lg="8">
+        <b-col lg="10">
           <router-view />
         </b-col>
-        <b-col lg="2">
-          <!-- <ProductGroupRight title="CÁC SẢN PHẨM MỚI" />
+        <!-- <b-col lg="1">
+          <ProductGroupRight title="CÁC SẢN PHẨM MỚI" />
           <ProductGroupRight title="CÁC SẢN PHẨM HOT" />
-          <ProductGroupRight title="CÁC SẢN PHẨM BÁN CHẠY" /> -->
-        </b-col>
+          <ProductGroupRight title="CÁC SẢN PHẨM BÁN CHẠY" />
+        </b-col> -->
       </b-row>
     </b-container>
     <Footer />
